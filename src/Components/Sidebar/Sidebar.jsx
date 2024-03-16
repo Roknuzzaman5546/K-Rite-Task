@@ -1,23 +1,22 @@
 import logoImg from "../../assets/logo/logo.jpg"
 import memberImg from "../../assets/Members/member1.jpg"
 import { LuPenTool } from "react-icons/lu";
-import { FaCode, FaRegFolder } from "react-icons/fa6";
+import { FaCode, FaPlus, FaRegFolder } from "react-icons/fa6";
 import { AiFillSound } from "react-icons/ai";
 import { RiAddCircleLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-import { IoIosArrowDropdown, IoIosArrowDropup, } from "react-icons/io";
+import { IoIosArrowDropdown, IoIosArrowDropup, IoIosHelpCircleOutline, } from "react-icons/io";
+import { GoPersonAdd } from "react-icons/go";
 import { useState } from "react";
 
 const Sidebar = () => {
     const [isDropDownOpen, setIsDropDownOpen] = useState(false)
+    const [isDropDownOpen2, setIsDropDownOpen2] = useState(false)
+    const [isDropDownOpen3, setIsDropDownOpen3] = useState(false)
 
-    const handleDropDownClick = () => {
-        setIsDropDownOpen(!isDropDownOpen);
-        // console.log(isDropDownOpen);
-    }
 
     return (
-        <div className=" h-screen">
+        <div className=" h-full">
             {/* sidebar header */}
             <div className=" flex items-center justify-between">
                 <div className=" flex items-center gap-2">
@@ -37,24 +36,38 @@ const Sidebar = () => {
                 {/* Team menu */}
                 <menu>
                     <ul className="menu rounded-box w-full">
-                        <li className=" font-bold"><a><LuPenTool />Design Team<button className=" btn btn-xs">X + 1</button></a></li>
-                        <li className=" font-bold"><a><AiFillSound></AiFillSound> Marketing Team<button className=" btn btn-xs">X + 2</button></a></li>
+                        <li className="font-bold">
+                            <a><LuPenTool />Design Team<button className=" btn btn-xs">X + 1</button>
+                            </a>
+                        </li>
+                        <li className=" font-bold">
+                            <NavLink to="/marketingTeam">
+                                <AiFillSound></AiFillSound>
+                                Marketing Team
+                                <button className=" btn btn-xs">X + 2</button>
+                            </NavLink>
+                        </li>
                         <li className=" font-bold"><a><FaCode></FaCode> Development Team<button className=" btn btn-xs">X + 3</button></a></li>
                         {/* this time this create menu don't work if you need workable then you can dynamic  */}
                         <li><a><RiAddCircleLine></RiAddCircleLine> Create Team</a></li>
                     </ul>
                 </menu>
-                {/* folder menu */}
-                <div className="menu ml-3">
+                {/* folder dropDown menu */}
+                <div className=" ml-3 mt-2">
+                    {/* folder title */}
+                    <div className="flex items-center justify-between px-2">
+                        <h2>Folder</h2>
+                        <FaPlus></FaPlus>
+                    </div>
                     {/* Products folder */}
                     <div className={`collapse mt-2 ${isDropDownOpen ? "" : "h-[35px]"}`}>
                         <input
                             className="max-h-[30px] min-h-[30px]"
                             type="checkbox"
-                            onClick={handleDropDownClick}
+                            onClick={() => setIsDropDownOpen(!isDropDownOpen)}
                         />
                         <div
-                            className={`collapse-title max-h-[30px] min-h-[30px] xl:text-[20px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen ? "bg-base-200" : ""}`}
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen ? "bg-base-200" : ""}`}
                         >
                             <div className=" flex items-center gap-2">
                                 <FaRegFolder></FaRegFolder>
@@ -65,17 +78,33 @@ const Sidebar = () => {
                         </div>
                         <div className="collapse-content">
                             <ul className="menu menu-sm rounded-box w-full">
-                                <li className="dashLi xl:text-[20px]">
+                                <li className="dashLi">
                                     <NavLink
-                                        to="/dashboard/rentReq"
+                                        to="/roadmap"
                                         className="dashNav flex items-center gap-2"
                                     >
                                         Roadmap
                                     </NavLink>
                                 </li>
-                                <li className="dashLi xl:text-[20px] pt-2">
+                                <li className="dashLi pt-2">
                                     <NavLink
-                                        to="/dashboard/buyReq"
+                                        to="/feedback"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        Feedback
+                                    </NavLink>
+                                </li>
+                                <li className="dashLi pt-2">
+                                    <NavLink
+                                        to="/performance"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        Performance
+                                    </NavLink>
+                                </li>
+                                <li className="dashLi pt-2">
+                                    <NavLink
+                                        to="/feedback"
                                         className="dashNav flex items-center gap-2"
                                     >
                                         Feedback
@@ -84,6 +113,138 @@ const Sidebar = () => {
                             </ul>
                         </div>
                     </div>
+                    {/* sales folder */}
+                    <div className={`collapse mt-2 ${isDropDownOpen2 ? "" : "h-[35px]"}`}>
+                        <input
+                            className="max-h-[30px] min-h-[30px]"
+                            type="checkbox"
+                            onClick={() => setIsDropDownOpen2(!isDropDownOpen2)}
+                        />
+                        <div
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen2 ? "bg-base-200" : ""}`}
+                        >
+                            <div className=" flex items-center gap-2">
+                                <FaRegFolder></FaRegFolder>
+                                Sales
+                            </div>
+                            {isDropDownOpen2 ? <IoIosArrowDropup className=" text-[16px]" /> : <IoIosArrowDropdown className="text-[16px]" />}
+                        </div>
+                        <div className="collapse-content">
+                            <ul className="menu menu-sm rounded-box w-full">
+                                <li className="dashLi">
+                                    <NavLink
+                                        to="/roadmap"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        Website sales
+                                    </NavLink>
+                                </li>
+                                <li className="dashLi pt-2">
+                                    <NavLink
+                                        to="/feedback"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        App sales
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    {/* design folder */}
+                    <div className={`collapse mt-2 ${isDropDownOpen3 ? "" : "h-[35px]"}`}>
+                        <input
+                            className="max-h-[30px] min-h-[30px]"
+                            type="checkbox"
+                            onClick={() => setIsDropDownOpen3(!isDropDownOpen3)}
+                        />
+                        <div
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen3 ? "bg-base-200" : ""}`}
+                        >
+                            <div className=" flex items-center gap-2">
+                                <FaRegFolder></FaRegFolder>
+                                Design
+                            </div>
+                            {isDropDownOpen3 ? <IoIosArrowDropup className=" text-[16px]" /> : <IoIosArrowDropdown className="text-[16px]" />}
+                        </div>
+                        <div className="collapse-content">
+                            <ul className="menu menu-sm rounded-box w-full">
+                                <li className="dashLi">
+                                    <NavLink
+                                        to="/webDesign"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        Website design
+                                    </NavLink>
+                                </li>
+                                <li className="dashLi pt-2">
+                                    <NavLink
+                                        to="/appDesign"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        App design
+                                    </NavLink>
+                                </li>
+                                <li className="dashLi pt-2">
+                                    <NavLink
+                                        to="/graphicDesign"
+                                        className="dashNav flex items-center gap-2"
+                                    >
+                                        Graphic design
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {/* nonDropDown menu */}
+                <menu className="ml-1">
+                    <ul className="menu">
+                        {/* office folder */}
+                        <li>
+                            <NavLink to="/office" className=" flex items-center gap-2 p-2 font-bold">
+                                <FaRegFolder></FaRegFolder>
+                                Office
+                            </NavLink>
+                        </li>
+                        {/* legal folder */}
+                        <li>
+                            <NavLink to="/legal" className=" flex items-center gap-2 p-2 font-bold mt-1">
+                                <FaRegFolder></FaRegFolder>
+                                Legal
+                            </NavLink>
+                        </li>
+                    </ul>
+                </menu>
+                {/* sidebar footer part */}
+                <div className="mt-12">
+                    <menu className="ml-1">
+                        <ul className="menu">
+                            <li>
+                                <NavLink to='/inviteFiend' className=" flex items-center gap-2 p-2 font-bold">
+                                    <GoPersonAdd />
+                                    Invite Friends
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/help' className=" flex justify-between items-center gap-2 p-2 font-bold">
+                                    <div className=" flex gap-1">
+                                        <IoIosHelpCircleOutline />
+                                        Help and first step
+                                    </div>
+                                    <button className=" btn btn-xs">0^3</button>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/help' className=" flex items-center justify-between p-2 gap-2 font-bold">
+                                    <div className=" flex gap-1">
+                                        <button className="btn btn-xs">7</button>
+                                        Days left on trail
+                                    </div>
+                                    <button className="btn btn-xs bg-neutral text-white ml-5">Add trailing</button>
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </menu>
                 </div>
             </div>
         </div>

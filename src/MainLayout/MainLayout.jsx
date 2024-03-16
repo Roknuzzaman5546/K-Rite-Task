@@ -8,7 +8,7 @@ const MainLayout = () => {
             <div className=" w-[22%] border rounded-md shadow-md px-3 py-2">
                 <Sidebar></Sidebar>
             </div>
-            <div className=" w-[78%] border">
+            <div className=" w-[78%] px-3 py-2">
                 <Outlet></Outlet>
             </div>
         </div>
