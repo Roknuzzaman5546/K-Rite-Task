@@ -1,10 +1,9 @@
 import { IoCopyOutline } from "react-icons/io5";
 import { CiSettings } from "react-icons/ci";
 import { TbAdjustmentsHorizontal, TbBrand4Chan } from "react-icons/tb";
-import { IoIosArrowDropdown, IoIosArrowDropup, IoIosNotifications } from "react-icons/io";
+import { IoIosArrowDropdown, IoIosNotifications } from "react-icons/io";
 import { RiDeleteBin2Line, RiDeleteBin7Line } from "react-icons/ri";
 import { HiOutlineAdjustments } from "react-icons/hi";
-import { useState } from "react";
 import { RiAddCircleLine } from "react-icons/ri";
 import { FaMeta } from "react-icons/fa6";
 
@@ -886,19 +885,19 @@ const MarketingTeam = () => {
             </div>
             {/* Footer button */}
             <div className=" mt-20 flex items-center justify-center">
-                <div className=" flex justify-center items-center gap-2 border rounded shadow w-fit p-2">
+                <div className=" flex justify-center items-center gap-2 border rounded shadow w-fit p-1">
                     {/* Notification button */}
-                    <button className=" flex gap-2 items-center border py-2 px-3 font-bold">
+                    <button className=" flex gap-2 items-center border rounded-md py-2 px-3 font-bold">
                         <IoIosNotifications />
                         Selected
                     </button>
                     {/* Archive button */}
-                    <button className=" flex gap-2 items-center border py-2 px-3 font-bold">
+                    <button className=" flex gap-2 items-center border rounded-md py-2 px-3 font-bold">
                         <RiDeleteBin2Line />
                         Archived
                     </button>
                     {/* Delete button */}
-                    <button className=" text-red-700 flex gap-2 items-center border py-2 px-3 font-bold">
+                    <button className=" text-red-700 flex gap-2 items-center border rounded-md py-2 px-3 font-bold">
                         <RiDeleteBin7Line />
                         Delete
                     </button>

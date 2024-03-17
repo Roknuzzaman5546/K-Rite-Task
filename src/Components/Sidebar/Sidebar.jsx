@@ -16,7 +16,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className=" h-fit">
+        <div className=" h-fit text-sm">
             {/* sidebar header */}
             <div className=" flex items-center justify-between">
                 <div className=" flex items-center gap-2">
@@ -67,7 +67,7 @@ const Sidebar = () => {
                             onClick={() => setIsDropDownOpen(!isDropDownOpen)}
                         />
                         <div
-                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen ? "bg-base-200" : ""}`}
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen ? " bg-neutral text-white" : ""}`}
                         >
                             <div className=" flex items-center gap-2">
                                 <FaRegFolder></FaRegFolder>
@@ -121,7 +121,7 @@ const Sidebar = () => {
                             onClick={() => setIsDropDownOpen2(!isDropDownOpen2)}
                         />
                         <div
-                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen2 ? "bg-base-200" : ""}`}
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen2 ? " bg-neutral text-white" : ""}`}
                         >
                             <div className=" flex items-center gap-2">
                                 <FaRegFolder></FaRegFolder>
@@ -158,7 +158,7 @@ const Sidebar = () => {
                             onClick={() => setIsDropDownOpen3(!isDropDownOpen3)}
                         />
                         <div
-                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen3 ? "bg-base-200" : ""}`}
+                            className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen3 ? " bg-neutral text-white" : ""}`}
                         >
                             <div className=" flex items-center gap-2">
                                 <FaRegFolder></FaRegFolder>
