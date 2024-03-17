@@ -16,7 +16,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className=" h-full">
+        <div className=" h-fit">
             {/* sidebar header */}
             <div className=" flex items-center justify-between">
                 <div className=" flex items-center gap-2">
@@ -216,7 +216,7 @@ const Sidebar = () => {
                     </ul>
                 </menu>
                 {/* sidebar footer part */}
-                <div className="mt-12">
+                <div className="mt-[180px]">
                     <menu className="ml-1">
                         <ul className="menu">
                             <li>
