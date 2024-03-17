@@ -1,15 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Components/Sidebar/Sidebar";
-import { useState } from "react";
-import { FaBars } from "react-icons/fa6";
 
 const MainLayout = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-        // console.log(isSidebarOpen);
-    };
-
     return (
         <div className=" my-5">
             {/* SideMenuBar import from sidebar components */}
@@ -33,7 +25,7 @@ const MainLayout = () => {
                 </div>
             </div>
             {/* small device */}
-            <div className=" md:hidden flex">
+            <div className=" md:hidden flex overflow-hidden">
                 <Outlet></Outlet>
             </div>
         </div>

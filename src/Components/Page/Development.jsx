@@ -1,4 +1,4 @@
-// THis Marketing team just design by html, css, javascript, react.js
+// THis Development team just Development by html, css, javascript, react.js
 import { IoCopyOutline } from "react-icons/io5";
 import { CiSettings } from "react-icons/ci";
 import { TbAdjustmentsHorizontal, TbBrand4Chan } from "react-icons/tb";
@@ -10,13 +10,13 @@ import { FaSearch } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
 
 
-const MarketingTeam = () => {
+const Development = () => {
     return (
         <div>
             {/* header section */}
             <header>
                 <div className="flex items-center justify-between">
-                    <h2 className=" text-2xl font-bold">Marketing Team</h2>
+                    <h2 className=" text-2xl font-bold">Development Team</h2>
                     {/* header right side */}
                     <div className=" flex items-center gap-2">
                         <div className=" flex items-center border rounded-md py-1 px-2">
@@ -35,7 +35,7 @@ const MarketingTeam = () => {
             </header>
             {/* sort option */}
             <div className="mt-3 flex items-center justify-between">
-                {/* Now this time just i design this shorted button and added dropdown just for design this buttons are not  workable*/}
+                {/* Now this time just i Development this shorted button and added dropdown just for Development this buttons are not  workable*/}
                 {/* left side sort */}
                 <div>
                     {/* ALl brands sort */}
@@ -214,7 +214,7 @@ const MarketingTeam = () => {
                         </td>
                         {/* description part */}
                         <td className=" border-l text-sm">
-                            <p className=" ml-2 line-clamp-1 font-bold">Include design purpose used</p>
+                            <p className=" ml-2 line-clamp-1 font-bold">Include Development purpose used</p>
                         </td>
                         {/* avatar part */}
                         <td className=" border-l">
@@ -475,7 +475,7 @@ const MarketingTeam = () => {
                         </td>
                         {/* description part */}
                         <td className=" border-l text-sm">
-                            <p className=" ml-2 line-clamp-1 font-bold">Lightsome design purpose used</p>
+                            <p className=" ml-2 line-clamp-1 font-bold">Lightsome Development purpose used</p>
                         </td>
                         {/* avatar part */}
                         <td className=" border-l">
@@ -871,4 +871,4 @@ const MarketingTeam = () => {
     );
 };
 
-export default MarketingTeam;
+export default Development;

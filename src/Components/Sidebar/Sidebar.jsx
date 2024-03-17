@@ -4,7 +4,7 @@ import { LuPenTool } from "react-icons/lu";
 import { FaCode, FaPlus, FaRegFolder } from "react-icons/fa6";
 import { AiFillSound } from "react-icons/ai";
 import { RiAddCircleLine } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { IoIosArrowDropdown, IoIosArrowDropup, IoIosHelpCircleOutline, } from "react-icons/io";
 import { GoPersonAdd } from "react-icons/go";
 import { useState } from "react";
@@ -37,8 +37,8 @@ const Sidebar = () => {
                 <menu>
                     <ul className="menu rounded-box w-full">
                         <li className="font-bold">
-                            <a><LuPenTool />Design Team<button className=" btn btn-xs">X + 1</button>
-                            </a>
+                            <NavLink to="/design"><LuPenTool />Design Team<button className=" btn btn-xs">X + 1</button>
+                            </NavLink>
                         </li>
                         <li className=" font-bold">
                             <NavLink to="/marketingTeam">
@@ -47,7 +47,7 @@ const Sidebar = () => {
                                 <button className=" btn btn-xs">X + 2</button>
                             </NavLink>
                         </li>
-                        <li className=" font-bold"><a><FaCode></FaCode> Development Team<button className=" btn btn-xs">X + 3</button></a></li>
+                        <li className=" font-bold"><NavLink to="/development"><FaCode></FaCode> Development Team<button className=" btn btn-xs">X + 3</button></NavLink></li>
                         {/* this time this create menu don't work if you need workable then you can dynamic  */}
                         <li><a><RiAddCircleLine></RiAddCircleLine> Create Team</a></li>
                     </ul>
@@ -69,10 +69,12 @@ const Sidebar = () => {
                         <div
                             className={`collapse-title max-h-[30px] min-h-[30px] font-bold flex justify-between gap-1.5 items-center p-2 ${isDropDownOpen ? " bg-neutral text-white" : ""}`}
                         >
-                            <div className=" flex items-center gap-2">
-                                <FaRegFolder></FaRegFolder>
-                                Products
-                            </div>
+                            <NavLink to="/product">
+                                <div className=" flex items-center gap-2">
+                                    <FaRegFolder></FaRegFolder>
+                                    Products
+                                </div>
+                            </NavLink>
                             {isDropDownOpen ? <IoIosArrowDropup className=" text-[16px]" /> : <IoIosArrowDropdown className="text-[16px]" />}
 
                         </div>

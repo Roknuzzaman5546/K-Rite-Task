@@ -1,4 +1,4 @@
-// THis Marketing team just design by html, css, javascript, react.js
+// THis Design team just design by html, css, javascript, react.js
 import { IoCopyOutline } from "react-icons/io5";
 import { CiSettings } from "react-icons/ci";
 import { TbAdjustmentsHorizontal, TbBrand4Chan } from "react-icons/tb";
@@ -10,13 +10,13 @@ import { FaSearch } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
 
 
-const MarketingTeam = () => {
+const Design = () => {
     return (
         <div>
             {/* header section */}
             <header>
                 <div className="flex items-center justify-between">
-                    <h2 className=" text-2xl font-bold">Marketing Team</h2>
+                    <h2 className=" text-2xl font-bold">Design Team</h2>
                     {/* header right side */}
                     <div className=" flex items-center gap-2">
                         <div className=" flex items-center border rounded-md py-1 px-2">
@@ -871,4 +871,4 @@ const MarketingTeam = () => {
     );
 };
 
-export default MarketingTeam;
+export default Design;
